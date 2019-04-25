@@ -1,0 +1,43 @@
+{
+    "name": "seti-extended",
+    "displayName": "Seti extended",
+    "description": "Modified Seti icon theme",
+    "version": "1.0.0",
+    "publisher": "Wix",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/overengineered/vscode-seti-extended.git"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "iconThemes": [
+            {
+                "id": "seti-extended",
+                "label": "Seti Extended",
+                "path": "./icons/seti-ext-icon-theme.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
